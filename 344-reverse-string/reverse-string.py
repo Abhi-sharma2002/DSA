@@ -1,6 +1,5 @@
 class Solution(object):
     def reverseString(self, s):
-        
         i =0
         j = len(s) -1
         while i < j:
@@ -8,3 +7,5 @@ class Solution(object):
             i+=1
             j-=1
         return s
+
+        
