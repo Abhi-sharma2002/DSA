@@ -36,7 +36,7 @@ class Solution(object):
             # elif len(word2) > i :
             #     k.append(word2[i:len(word2)])
 
-            return "".join(k)
+            return k
 
 
 
