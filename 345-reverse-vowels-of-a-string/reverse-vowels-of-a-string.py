@@ -8,8 +8,10 @@ class Solution(object):
 
             if s[a].lower() not in v:
                 a += 1
+                continue
             if s[b].lower() not in v:
                 b -=1
+                continue
             # else:
             #     a += 1
             #     b -=1
