@@ -1,7 +1,7 @@
 class Solution(object):
     def isValid(self, s):
         stack =[]
-        map={'}':'{',')':'(',']':'['}
+        map = {'}':'{',')':'(',']':'['}
         for c in s:
             if c in map:
                 top = stack.pop() if stack else '#'
