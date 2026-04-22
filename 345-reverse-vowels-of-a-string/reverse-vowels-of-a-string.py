@@ -1,27 +1,18 @@
-class Solution(object):
-    def reverseVowels(self, s):
-        a = 0
-        b = len(s)-1
-        s = list(s)
-        v = "aeiouAEIOU"
-        while a < b:
-
-            if s[a] not in v:
-                a += 1
+class Solution:
+    def reverseVowels(self, s: str) -> str:
+        v='aeiouAEIOU'
+        i=0
+        j=len(s)-1
+        s=list(s)
+        while i <j:
+            if s[i] not in v:
+                i+=1
                 continue
-            if s[b] not in v:
-                b -=1
+            elif s[j]   not in v:
+                j-=1
                 continue
-            # else:
-            #     a += 1
-            #     b -=1
-
-            if s[a] in v and s[b] in v :
-                s[a],s[b] = s[b],s[a]
-                a += 1
-                b -=1
+            else:
+                s[i],s[j] = s[j],s[i]
+                i+=1
+                j-=1
         return "".join(s)
-         
-
-            
-        
