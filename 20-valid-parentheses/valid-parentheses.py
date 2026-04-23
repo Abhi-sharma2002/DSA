@@ -2,12 +2,11 @@ class Solution(object):
     def isValid(self, s):
         stack =[]
         map ={'}':'{',')':'(',']':'['}
-        for i in s:
-            if i in map:
+        for c in s:
+            if c in map:
                 top = stack.pop() if stack else '#'
-                if map[i] != top:
+                if map[c] != top:
                     return False
             else:
-                stack.append(i)
+                stack.append(c)
         return not stack
-        
