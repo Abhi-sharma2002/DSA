@@ -3,16 +3,21 @@ class Solution:
         stack =[]
         curr =""
         num =0
-        for i in s:
-            if i.isdigit():
-                num = num*10 + int(i)
-            elif i == '[':
-                stack.append((curr,num))
+        for ch in s:
+            if ch.isdigit():
+                num= num*10 + int(ch)
+            elif ch == '[':
+                stack.append((curr , num))
                 curr=""
                 num=0
-            elif i == ']':
-                prev, n = stack.pop()
-                curr = prev + n * curr
+            elif ch == ']':
+                prev , n = stack.pop()
+                curr = prev +n * curr
             else:
-                curr+=i
+                curr+=ch
         return curr
+
+        
+        
+            
+        
