@@ -1,23 +1,20 @@
 class Solution:
     def decodeString(self, s: str) -> str:
         stack =[]
-        curr =""
         num =0
+        curr=""
         for ch in s:
             if ch.isdigit():
-                num= num*10 + int(ch)
+                num = num*10 + int(ch)
             elif ch == '[':
-                stack.append((curr , num))
+                stack.append((curr,num))
                 curr=""
                 num=0
-            elif ch == ']':
+            elif ch== ']':
                 prev , n = stack.pop()
-                curr = prev +n * curr
+                curr = prev+n *curr
             else:
                 curr+=ch
         return curr
 
-        
-        
-            
         
